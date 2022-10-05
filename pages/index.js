@@ -105,7 +105,7 @@ export default function Index() {
         </div>
       </div>
       <div className="container mx-auto mt-32">
-        <h1 className="text-4xl text-center font-bold  text-gray-800 mt-12 mb-12">
+        <h1 className="text-3xl text-center font-bold  text-gray-800 mt-12 mb-12">
           Grove X Collection
         </h1>
         <div className="flex gap-12 justify-center items-center">
