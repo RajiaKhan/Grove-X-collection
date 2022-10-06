@@ -3,6 +3,57 @@ import React, { useState } from "react";
 export default function Index() {
   return (
     <>
+      <div className="container mx-auto mb-12">
+        <div className="flex ">
+          <div className="w-11/12  px-2 py-5">
+            <div className="flex gap-12">
+              <div className="">
+                <Image
+                  className="cursor-pointer"
+                  src="/search.svg"
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">Men</h1>
+              </div>
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">Women</h1>
+              </div>
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">Kids</h1>
+              </div>
+            </div>
+          </div>
+          <div className="w-11/12  py-5 ">
+            <div className="flex justify-center items-center">
+              <Image
+                className="cursor-pointer"
+                src="/AnitaJane.svg"
+                width={115}
+                height={24}
+              />
+            </div>
+          </div>
+          <div className="w-11/12 ">
+            <div className="flex  py-5 px-2 flex-row-reverse  gap-12 ">
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">About</h1>
+              </div>
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">Blogs</h1>
+              </div>
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">
+                  {" "}
+                  Join Newsletter
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container mx-auto w-8/12 ">
         <div className="">
           <h1 className="text-gray-800 text-4xl font-bold">Check out</h1>

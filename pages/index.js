@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 export default function Index() {
   return (
@@ -66,9 +67,11 @@ export default function Index() {
               Friction-Free Customer Service. Try Kayako free for 14 days.
             </h1>
             <div className="mt-8 ">
-              <button className="bg-gray-800 py-3 px-12 text-white hover:bg-gray-900 focus:bg-gray-900 ">
-                See More
-              </button>
+              <Link href="/description">
+                <button className="bg-gray-800 py-3 px-12 text-white hover:bg-gray-900 focus:bg-gray-900 ">
+                  See More
+                </button>
+              </Link>
             </div>
             <div className="flex mt-8 gap-5">
               <div className="cursor-pointer">
@@ -230,10 +233,12 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="">
-                  <button className="text-white bg-gray-800 py-4 px-16">
-                    {" "}
-                    Join now
-                  </button>
+                  <Link href="/cart">
+                    <button className="text-white bg-gray-800 py-3 px-16">
+                      {" "}
+                      Join now
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -298,10 +303,12 @@ export default function Index() {
           <div className="bg-gray-300 w-11/12 px-3 py-4">
             <div className="text-center text-gray-600 text-lg mt-2">Bags</div>
           </div>
-          <div className="bg-gray-300 w-11/12 px-3 py-4">
-            <div className="text-center text-gray-600 text-lg mt-2">
-              Watches
-            </div>
+          <div className="bg-gray-300 w-11/12 px-3 py-4 cursor-pointer">
+            <Link href="/grid-2">
+              <div className="text-center text-gray-600 text-lg mt-2">
+                Watches
+              </div>
+            </Link>
           </div>
         </div>
       </div>

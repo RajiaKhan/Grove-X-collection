@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 export default function Index() {
   return (
@@ -11,12 +12,27 @@ export default function Index() {
             </h1>
           </div>
           <div className="ml-auto cursor-pointer">
-            <Image src="/Frame (3).svg" width={30} height={30} />
+            <Link href="/filters">
+              <Image src="/Frame (3).svg" width={30} height={30} />
+            </Link>
           </div>
         </div>
         <div className="flex justify-center items-center mt-32 gap-12">
-          <div className="w-11/12 flex justify-center items-center">
-            <Image src="/watch.svg" width={624} height={590} />
+          <div className="w-11/12">
+            <div className=" flex justify-center items-center">
+              <Image src="/watch.svg" width={624} height={590} />
+            </div>
+            <div className="flex">
+              <div className="">
+                <h1 className="text-gray-800 text-lg font-bold">Chanel</h1>
+                <h1 className="text-gray-600 text-md font-semibold">
+                  Coco Nior 100ml
+                </h1>
+              </div>
+              <div className="ml-auto text-gray-800 text-lg font-bold">
+                $175.00
+              </div>
+            </div>
           </div>
           <div className="w-11/12">
             <div className="flex gap-12">
@@ -138,6 +154,17 @@ export default function Index() {
           </div>
           <div className="w-11/12 ">
             <Image src="/cart-perfume.svg" width={624} height={590} />
+            <div className="flex w-full 2xl:w-10/12 ">
+              <div className="">
+                <h1 className="text-gray-800 text-lg font-bold">Chanel</h1>
+                <h1 className="text-gray-600 text-md font-semibold">
+                  Coco Nior 100ml
+                </h1>
+              </div>
+              <div className="ml-auto text-gray-800 text-lg font-bold">
+                $175.00
+              </div>
+            </div>
           </div>
         </div>
       </div>

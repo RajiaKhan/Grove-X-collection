@@ -1,9 +1,61 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
-export default function Index() {
+const cart = () => {
   return (
     <>
       <div className="container mx-auto">
+        <div className="flex ">
+          <div className="w-11/12  px-2 py-5">
+            <div className="flex gap-12">
+              <div className="">
+                <Image
+                  className="cursor-pointer"
+                  src="/search.svg"
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">Men</h1>
+              </div>
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">Women</h1>
+              </div>
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">Kids</h1>
+              </div>
+            </div>
+          </div>
+          <div className="w-11/12  py-5 ">
+            <div className="flex justify-center items-center">
+              <Image
+                className="cursor-pointer"
+                src="/AnitaJane.svg"
+                width={115}
+                height={24}
+              />
+            </div>
+          </div>
+          <div className="w-11/12 ">
+            <div className="flex  py-5 px-2 flex-row-reverse  gap-12 ">
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">About</h1>
+              </div>
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">Blogs</h1>
+              </div>
+              <div className="">
+                <h1 className="text-gray-800 cursor-pointer">
+                  {" "}
+                  Join Newsletter
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto mt-12">
         <h1 className="text-4xl font-bold ">Bag</h1>
         <div className="flex mt-12 gap-12">
           <div className="w-11/12 ">
@@ -239,9 +291,11 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex justify-center items-center px-12">
-                  <button className=" bg-gray-800 text-white mt-6 py-4 w-full ">
-                    Checkout
-                  </button>
+                  <Link href="/checkout">
+                    <button className=" bg-gray-800 text-white mt-6 py-4 w-full hover:bg-gray-900 focus:bg-gray-800 ">
+                      Checkout
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -338,4 +392,5 @@ export default function Index() {
       </div>
     </>
   );
-}
+};
+export default cart;
