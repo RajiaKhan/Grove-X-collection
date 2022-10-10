@@ -1,9 +1,129 @@
 import Image from "next/image";
 import React, { useState } from "react";
 export default function Index() {
+  const [navbar, setNavbar] = useState(false);
   return (
     <>
-      <div className="container mx-auto mb-12">
+      <div className="justify-center container mx-auto block lg:hidden xl:hidden 2xl:hidden   ">
+        <div className="  ">
+          <nav className="">
+            <div className="justify-between px-4 mx-auto items-center lg:max-w-7xl xl:flex 2xl:flex lg:flex md:px-8">
+              <div>
+                <div className="flex items-center justify-between py-3 md:py-5 ">
+                  <a href="#">
+                    <Image
+                      className="cursor-pointer"
+                      src="/Hourglass.svg"
+                      width={80}
+                      height={80}
+                    />
+                  </a>
+                  <div className="xl:hidden 2xl:hidden lg:hidden ">
+                    <button
+                      className="p-2  text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                      onClick={() => setNavbar(!navbar)}
+                    >
+                      {navbar ? (
+                        <Image
+                          className="cursor-pointer "
+                          src="/close.svg"
+                          width={20}
+                          height={20}
+                        />
+                      ) : (
+                        <svg
+                          fill="#000000"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 30 30"
+                          width="30px"
+                          height="30px"
+                        >
+                          <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z" />
+                        </svg>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  className={`flex-1 bg-gray-50 justify-self-center pb-3 mt-8 xl:hidden 2xl:hidden lg:hidden md:pb-0 md:mt-0 ${
+                    navbar ? "block" : "hidden"
+                  }`}
+                >
+                  <ul
+                    className="items-center gap-20 px-4 
+               jy-center  xl:flex 2xl:flex lg:flex space-y-0"
+                  >
+                    <li className="py-3">
+                      <a
+                        href="#section5"
+                        className="font-semibold text-gray-600"
+                      >
+                        <Image
+                          className="cursor-pointer"
+                          src="/AnitaJane.svg"
+                          width={115}
+                          height={24}
+                        />
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section6"
+                        className="font-semibold text-gray-600"
+                      >
+                        Men
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section7"
+                        className="font-semibold text-gray-600"
+                      >
+                        Women
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Kids
+                      </a>
+                    </li>
+                    <li className="py-3 ">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Join Newsletter
+                      </a>
+                    </li>
+                    <li className="py-3 ">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Blogs
+                      </a>
+                    </li>
+                    <li className="py-3  pb-32">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        About
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div className="container mx-auto hidden lg:block xl:block 2xl:block px-4">
         <div className="flex ">
           <div className="w-11/12  px-2 py-5">
             <div className="flex gap-12">
@@ -67,12 +187,40 @@ export default function Index() {
               <span className="sr-only">Search</span>
               <span className="absolute inset-y-0 left-0 flex items-center "></span>
               <input
-                className="border-b  placeholder:text-gray-700 block bg-white w-full  mt-5 py-2 outline-none  text-lg"
+                className="border-b  placeholder:text-gray-700 block bg-white w-full px-2 mt-5 py-2 outline-none  text-lg"
                 placeholder="Email"
                 type="text"
                 name="search"
               />
             </label>
+            <div className="flex  mt-6">
+              <div className="bg-white mt-1 dark:bg-gray-800 border rounded-sm border-gray-400 dark:border-gray-700 mr-2 w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
+                <input
+                  type="checkbox"
+                  className="checkbox opacity-0 absolute cursor-pointer  w-full h-full"
+                />
+                <div className="check-icon hidden bg-gray-800 text-white rounded-sm">
+                  <svg
+                    className="icon icon-tabler icon-tabler-check"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={20}
+                    height={20}
+                    viewBox="0 0 24 24"
+                    strokeWidth="2.5"
+                    stroke="currentColor"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <path d="M5 12l5 5l10 -10" />
+                  </svg>
+                </div>
+              </div>
+              <div className="">
+                <h1>Email me with news and offers.</h1>
+              </div>
+            </div>
           </div>
           <div className="w-11/12"></div>
         </div>
@@ -82,7 +230,7 @@ export default function Index() {
               <span className="sr-only">Search</span>
               <span className="absolute inset-y-0 left-0 flex items-center "></span>
               <input
-                className="border-b  placeholder:text-gray-700 block bg-white w-full  mt-5 py-2 outline-none  text-lg"
+                className="border-b  placeholder:text-gray-700 block bg-white w-full px-2 mt-5 py-2 outline-none  text-lg"
                 placeholder="First Name"
                 type="text"
                 name="search"
@@ -94,7 +242,7 @@ export default function Index() {
               <span className="sr-only">Search</span>
               <span className="absolute inset-y-0 left-0 flex items-center "></span>
               <input
-                className="border-b  placeholder:text-gray-700 block bg-white w-full  mt-5 py-2 outline-none  text-lg"
+                className="border-b  placeholder:text-gray-700 block bg-white w-full px-2  mt-5 py-2 outline-none  text-lg"
                 placeholder="Last Name"
                 type="text"
                 name="search"
@@ -107,7 +255,7 @@ export default function Index() {
             <span className="sr-only">Search</span>
             <span className="absolute inset-y-0 left-0 flex items-center "></span>
             <input
-              className="border-b  placeholder:text-gray-700 block bg-white w-full  mt-5 py-2 outline-none  text-lg"
+              className="border-b  placeholder:text-gray-700 block bg-white w-full px-2 mt-5 py-2 outline-none  text-lg"
               placeholder="Address"
               type="text"
               name="search"
@@ -119,7 +267,7 @@ export default function Index() {
             <span className="sr-only">Search</span>
             <span className="absolute inset-y-0 left-0 flex items-center "></span>
             <input
-              className="border-b  placeholder:text-gray-700 block bg-white w-full  mt-5 py-2 outline-none  text-lg"
+              className="border-b  placeholder:text-gray-700 block bg-white w-full px-2 mt-5 py-2 outline-none  text-lg"
               placeholder="Address (Line 02)"
               type="text"
               name="search"
@@ -133,7 +281,7 @@ export default function Index() {
               name="language"
               required
               id="language"
-              className="bg-white cursor-pointer w-full text-gray-400   appearance-none py-1 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none text-blue-900  rounded"
+              className="bg-white cursor-pointer px-2  w-full text-gray-800 px-2  appearance-none py-1 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none   rounded"
             >
               <option value="Switzerland">Country / Region</option>
               <option value="America">America</option>
@@ -151,7 +299,7 @@ export default function Index() {
               name="language"
               required
               id="language"
-              className="bg-white cursor-pointer w-full text-gray-400   appearance-none py-1 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none text-blue-900  rounded"
+              className="bg-white cursor-pointer px-2  w-full text-gray-800   appearance-none py-1 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none rounded"
             >
               <option value="Switzerland">Region (Optional)</option>
               <option value="America">America</option>
@@ -171,7 +319,7 @@ export default function Index() {
               name="language"
               required
               id="language"
-              className="bg-white cursor-pointer w-full text-gray-400   appearance-none py-1 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none text-blue-900  rounded"
+              className="bg-white cursor-pointer px-2  w-full text-gray-800   appearance-none py-1 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none   rounded"
             >
               <option value="Switzerland">Town/City</option>
               <option value="America">America</option>
@@ -189,7 +337,7 @@ export default function Index() {
               name="language"
               required
               id="language"
-              className="bg-white cursor-pointer w-full text-gray-400   appearance-none py-1 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none text-blue-900  rounded"
+              className="bg-white cursor-pointer px-2  w-full text-gray-800   appearance-none py-1 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none   rounded"
             >
               <option value="Switzerland">Zip Code</option>
               <option value="America"> 0001</option>
@@ -208,12 +356,31 @@ export default function Index() {
               <span className="sr-only">Search</span>
               <span className="absolute inset-y-0 left-0 flex items-center "></span>
               <input
-                className="border-b placeholder:text-gray-700 block bg-white w-full  mt-5 py-2 outline-none  text-lg"
+                className="border-b placeholder:text-gray-700 block bg-white w-full px-2  mt-5 py-2 outline-none  text-lg"
                 placeholder="Phone Number"
                 type="text"
                 name="search"
               />
             </label>
+            <div className="flex mt-4 px-2">
+              <input
+                className="w-4 h-4 mr-2"
+                type="checkbox"
+                id="Leather"
+                name="Leather"
+                value="Leather"
+              />
+              <div className="inline-block">
+                <div className="flex space-x-6 justify-center items-center">
+                  <label
+                    className="mr-2 text-sm leading-3 font-normal text-gray-800 dark:text-white"
+                    for="Leather"
+                  >
+                    Save this information for next time.
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="w-11/12"></div>
         </div>
@@ -364,7 +531,7 @@ export default function Index() {
               name="language"
               required
               id="language"
-              className="bg-white cursor-pointer w-full text-gray-900 font-semibold   appearance-none py-1 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none text-blue-900  rounded"
+              className="bg-white cursor-pointer px-2  w-full text-gray-900 font-semibold   appearance-none py-1 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none text-blue-900  rounded"
             >
               <option value="Switzerland">Expiry Date</option>
               <option value="America">10 Oct 2020</option>
@@ -478,6 +645,14 @@ export default function Index() {
           © 2021 Luxe Inc. All rights reserved.
         </h1>
       </div>
+      <style>
+        {`
+                .checkbox:checked + .check-icon {
+                  display:flex;}
+                }
+                      }
+                `}
+      </style>
     </>
   );
 }

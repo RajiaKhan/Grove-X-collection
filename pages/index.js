@@ -2,9 +2,129 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 export default function Index() {
+  const [navbar, setNavbar] = useState(false);
   return (
     <>
-      <div className="container mx-auto">
+      <div className="justify-center container mx-auto block lg:hidden xl:hidden 2xl:hidden   ">
+        <div className="  ">
+          <nav className="">
+            <div className="justify-between px-4 mx-auto items-center lg:max-w-7xl xl:flex 2xl:flex lg:flex md:px-8">
+              <div>
+                <div className="flex items-center justify-between py-3 md:py-5 ">
+                  <a href="#">
+                    <Image
+                      className="cursor-pointer"
+                      src="/Hourglass.svg"
+                      width={80}
+                      height={80}
+                    />
+                  </a>
+                  <div className="xl:hidden 2xl:hidden lg:hidden ">
+                    <button
+                      className="p-2  text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                      onClick={() => setNavbar(!navbar)}
+                    >
+                      {navbar ? (
+                        <Image
+                          className="cursor-pointer "
+                          src="/close.svg"
+                          width={20}
+                          height={20}
+                        />
+                      ) : (
+                        <svg
+                          fill="#000000"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 30 30"
+                          width="30px"
+                          height="30px"
+                        >
+                          <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z" />
+                        </svg>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  className={`flex-1 bg-gray-50 justify-self-center pb-3 mt-8 xl:hidden 2xl:hidden lg:hidden md:pb-0 md:mt-0 ${
+                    navbar ? "block" : "hidden"
+                  }`}
+                >
+                  <ul
+                    className="items-center gap-20 px-4 
+               jy-center  xl:flex 2xl:flex lg:flex space-y-0"
+                  >
+                    <li className="py-3">
+                      <a
+                        href="#section5"
+                        className="font-semibold text-gray-600"
+                      >
+                        <Image
+                          className="cursor-pointer"
+                          src="/AnitaJane.svg"
+                          width={115}
+                          height={24}
+                        />
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section6"
+                        className="font-semibold text-gray-600"
+                      >
+                        Men
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section7"
+                        className="font-semibold text-gray-600"
+                      >
+                        Women
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Kids
+                      </a>
+                    </li>
+                    <li className="py-3 ">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Join Newsletter
+                      </a>
+                    </li>
+                    <li className="py-3 ">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Blogs
+                      </a>
+                    </li>
+                    <li className="py-3  pb-32">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        About
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div className="container mx-auto hidden lg:block xl:block 2xl:block px-4">
         <div className="flex ">
           <div className="w-11/12  px-2 py-5">
             <div className="flex gap-12">
@@ -55,25 +175,30 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-12">
-        <div className="flex">
+      <div className="container mx-auto  mt-4 lg:mt-12 xl:mt-12 2xl:mt-12  px-4">
+        <div className="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row justify-center items-center">
           <div className="w-11/12 ">
-            <h1 className="text-7xl font-bold text-gray-800">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl 2xl:text-7xl xl:text-6xl text-center lg:text-left xl:text-left 2xl:text-left font-bold text-gray-800">
               Keep life organized and all in one place.
             </h1>
-            <h1 className="text-xl w-10/12 w-full mt-12 text-gray-600">
+            <h1 className="text-xs md:text-xl lg:text-sm 2xl:text-xl xl:text-md text-center  lg:text-left xl:text-left 2xl:text-left  lg:w-10/12 xl:w-10/12 2xl:w-10/12  w-full  mt-5 lg:mt-12 xl:mt-12 2xl:mt-12 text-gray-600">
               Design made-to-order for private clients, with one or more
               fittings. Have a workshop (atelier) in Paris. Deliver
               Friction-Free Customer Service. Try Kayako free for 14 days.
             </h1>
-            <div className="mt-8 ">
+            <div className=" mt-5 lg:mt-8 xl:mt-8 2xl:mt-8 ">
               <Link href="/description">
-                <button className="bg-gray-800 py-3 px-12 text-white hover:bg-gray-900 focus:bg-gray-900 ">
+                <button className="hidden xl:block 2xl:block lg:block bg-gray-800 py-3 px-12  text-white hover:bg-gray-900 focus:bg-gray-900 ">
+                  See More
+                </button>
+              </Link>
+              <Link href="/description">
+                <button className="bg-gray-800 block xl:hidden 2xl:hidden lg:hidden  py-3 w-full flex justify-center items-center  text-white hover:bg-gray-900 focus:bg-gray-900 ">
                   See More
                 </button>
               </Link>
             </div>
-            <div className="flex mt-8 gap-5">
+            <div className="flex mb-4 mt-4 lg:mt-8 xl:mt-8 2xl:mt-8  justify-center items-center xl:justify-start xl:items-start 2xl:justify-start 2xl:items-start lg:justify-start lg:items-start  gap-5">
               <div className="cursor-pointer">
                 <Image className="" src="/Frame.svg" width={24} height={24} />
               </div>
@@ -96,7 +221,7 @@ export default function Index() {
             </div>
           </div>
           <div className="w-11/12 ">
-            <div className="flex justify-end items-end">
+            <div className="flex justify-center items-center  xl:justify-end xl:items-end lg:justify-end lg:items-end 2xl:justify-end 2xl:items-end ">
               <Image
                 className=""
                 src="/hero image.svg"
@@ -107,84 +232,144 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-32">
-        <h1 className="text-3xl text-center font-bold  text-gray-800 mt-12 mb-12">
-          Grove X Collection
-        </h1>
-        <div className="flex gap-12 justify-center items-center">
-          <div className="border w-11/12 px-3 py-8">
-            <div className="flex justify-center items-center">
-              <Image className="" src="/bed.svg" width={24} height={24} />
+      <div className="container mx-auto mt-12 lg:mt-32 xl:mt-32 md:mt-20 2xl:mt-32">
+        <div className="block lg:block xl:block 2xl:block md:hidden">
+          <div className="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row  gap-8 justify-center items-center ">
+            <div className="border w-11/12 px-3 py-8">
+              <div className="flex  justify-center items-center">
+                <Image className="" src="/bed.svg" width={24} height={24} />
+              </div>
+              <div className="text-center text-xs sm:text-sm md:text-md lg:text-xs xl:text-sm 2xl:text-lg text-gray-600  mt-2">
+                Interior minimalism for your property
+              </div>
             </div>
-            <div className="text-center text-gray-600 text-lg mt-2">
-              Interior minimalism for your property
+            <div className="border w-11/12 px-3 py-8">
+              <div className="flex justify-center items-center">
+                <Image
+                  className=""
+                  src="/furniture.svg"
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="text-center text-xs lg:text-xs xl:text-sm 2xl:text-lg  text-gray-600 mt-2">
+                Furniture minimalism for your property
+              </div>
+            </div>
+            <div className="border w-11/12 px-3 py-8">
+              <div className="flex justify-center items-center">
+                <Image
+                  className=""
+                  src="/property.svg"
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="text-center text-xs lg:text-xs xl:text-sm 2xl:text-lg   text-gray-600 mt-2">
+                Durability for your property
+              </div>
+            </div>
+            <div className="border w-11/12 px-3 py-8">
+              <div className="flex justify-center items-center">
+                <Image className="" src="/like.svg" width={24} height={24} />
+              </div>
+              <div className="text-center text-xs lg:text-xs xl:text-sm 2xl:text-lg   text-gray-600 mt-2 ">
+                Design minimalism for your future
+              </div>
             </div>
           </div>
-          <div className="border w-11/12 px-3 py-8">
-            <div className="flex justify-center items-center">
-              <Image className="" src="/furniture.svg" width={24} height={24} />
+        </div>
+        <div className="hidden  md:block lg:hidden xl:hidden 2xl:hidden px-12">
+          <div className="flex justify-center items-center gap-8 ">
+            <div className="border w-11/12 px-3 py-8">
+              <div className="flex  justify-center items-center">
+                <Image className="" src="/bed.svg" width={24} height={24} />
+              </div>
+              <div className="text-center text-xs sm:text-sm md:text-md lg:text-xs xl:text-sm 2xl:text-lg text-gray-600  mt-2">
+                Interior minimalism for your property
+              </div>
             </div>
-            <div className="text-center text-gray-600 text-lg mt-2">
-              Furniture minimalism for your property
+            <div className="border w-11/12 px-3 py-8">
+              <div className="flex justify-center items-center">
+                <Image
+                  className=""
+                  src="/furniture.svg"
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="text-center text-xs lg:text-xs xl:text-sm 2xl:text-lg  text-gray-600 mt-2">
+                Furniture minimalism for your property
+              </div>
             </div>
           </div>
-          <div className="border w-11/12 px-3 py-8">
-            <div className="flex justify-center items-center">
-              <Image className="" src="/property.svg" width={24} height={24} />
+          <div className="flex justify-center items-center gap-8 mt-8">
+            <div className="border w-11/12 px-3 py-8">
+              <div className="flex justify-center items-center">
+                <Image
+                  className=""
+                  src="/property.svg"
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="text-center text-xs lg:text-xs xl:text-sm 2xl:text-lg   text-gray-600 mt-2">
+                Durability for your property
+              </div>
             </div>
-            <div className="text-center text-gray-600 text-lg mt-2">
-              Durability for your property
-            </div>
-          </div>
-          <div className="border w-11/12 px-3 py-8">
-            <div className="flex justify-center items-center">
-              <Image className="" src="/like.svg" width={24} height={24} />
-            </div>
-            <div className="text-center text-gray-600 text-lg mt-2">
-              Design minimalism for your future
+            <div className="border w-11/12 px-3 py-8">
+              <div className="flex justify-center items-center">
+                <Image className="" src="/like.svg" width={24} height={24} />
+              </div>
+              <div className="text-center text-xs lg:text-xs xl:text-sm 2xl:text-lg   text-gray-600 mt-2 ">
+                Design minimalism for your future
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-32">
-        <div className="flex gap-12 place-content-center">
+      <div className="container mx-auto mt-32 hidden lg:block xl:block 2xl:block px-4">
+        <h1 className="text-5xl text-center font-bold  text-gray-800 mt-12 mb-16">
+          Grove X Collection
+        </h1>
+        <div className="flex gap-8 place-content-center">
           <div className=" ">
-            <div className="flex gap-12">
+            <div className="flex gap-8 justify-end items-end">
               <div className="">
                 <Image
                   className=""
                   src="/image 237.svg"
-                  width={296}
-                  height={345}
+                  width={356}
+                  height={405}
                 />
               </div>
               <div className="">
                 <Image
                   className=""
                   src="/image 238.svg"
-                  width={296}
-                  height={345}
+                  width={356}
+                  height={405}
                 />
               </div>
               <div className="">
                 <Image
                   className=""
                   src="/image 239.svg"
-                  width={296}
-                  height={345}
+                  width={356}
+                  height={405}
                 />
               </div>
             </div>
             <div className="mt-7">
               <div className="flex">
                 <div className="">
-                  <h1 className="text-gray-600 w-8/12">
+                  <h1 className="text-gray-600 w-8/12 ">
                     Take a peek at our newly added dresses for winters! Get in
                     quic as these hot items are sure to move fast.{" "}
                   </h1>
                 </div>
                 <div className="ml-auto">
-                  <div className="flex gap-3">
+                  <div className="flex  gap-3">
                     <div className="">
                       <Image
                         className=""
@@ -193,7 +378,7 @@ export default function Index() {
                         height={24}
                       />
                     </div>
-                    <div className="">
+                    <div className="w-8/12">
                       <h1 className="text-gray-700 underline cursor-pointer">
                         See all 18 reviews
                       </h1>
@@ -234,7 +419,7 @@ export default function Index() {
                 </div>
                 <div className="">
                   <Link href="/cart">
-                    <button className="text-white bg-gray-800 py-3 px-16">
+                    <button className="text-white bg-gray-800 py-3 px-16 hover:bg-gray-900 focus:bg-gray-900">
                       {" "}
                       Join now
                     </button>
@@ -244,46 +429,129 @@ export default function Index() {
             </div>
           </div>
           <div className="">
-            <Image className="" src="/image 240.svg" width={296} height={529} />
+            <Image className="" src="/image 240.svg" width={356} height={609} />
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-16 mb-16">
-        <div className="flex justify-center items-center gap-10">
-          <div className="">
-            <h1 className="text-4xl text-gray-800 font-bold">New Arrival</h1>
+      <div className="container mx-auto px-4 mt-12  block lg:hidden xl:hidden 2xl:hidden">
+        <h1 className="text-3xl text-center font-bold  text-gray-800 ">
+          Grove X Collection
+        </h1>
+        <h1 className="text-gray-600  text-center mt-5 text-sm">
+          Take a peek at our newly added dresses for winters! Get in quic as
+          these hot items are sure to move fast.{" "}
+        </h1>
+        <div className=" flex justify-center items-center mt-5">
+          <div className="w-full md:w-8/12">
+            <div className="">
+              <label class="relative block">
+                <span className="sr-only">Search</span>
+                <span className="absolute inset-y-0 left-0 flex items-center "></span>
+                <input
+                  className="border placeholder:text-slate-400 block bg-white  w-full border border-slate-300  py-3 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                  placeholder="Full Name"
+                  type="text"
+                  name="search"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div className=" flex justify-center items-center mt-5">
+          <div className="w-full md:w-8/12">
+            <div className="">
+              <label class="relative block">
+                <span className="sr-only">Search</span>
+                <span className="absolute inset-y-0 left-0 flex items-center "></span>
+                <input
+                  className="border placeholder:text-slate-400 block bg-white  w-full border border-slate-300  py-3 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                  placeholder="Email address"
+                  type="text"
+                  name="search"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div className=" mt-4 flex justify-center items-center">
+          <Link href="/cart">
+            <button className="text-white bg-gray-800 py-3 w-full md:w-8/12 hover:bg-gray-900 focus:bg-gray-900">
+              {" "}
+              Join now
+            </button>
+          </Link>
+        </div>
+        <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex flex-col  mt-6 gap-5 justify-center items-center">
+            <div className="">
+              <Image
+                className=""
+                src="/image 237.svg"
+                width={356}
+                height={405}
+              />
+            </div>
+            <div className="">
+              <Image
+                className=""
+                src="/image 238.svg"
+                width={356}
+                height={405}
+              />
+            </div>
+            <div className="">
+              <Image
+                className=""
+                src="/image 239.svg"
+                width={356}
+                height={405}
+              />
+            </div>
+          </div>
+
+          <div className=" mt-0 md:mt-6 justify-center items-center md:justify-start md:items-start flex ">
+            <Image className="" src="/image 240.svg" width={356} height={606} />
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto mt-5 lg:mt-20 xl:mt-20 2xl:mt-20  mb-16 px-2 ">
+        <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row place-content-center gap-8 justify-center items-center">
+          <div className="w-full lg:w-1/5 xl:w-1/5 2xl:w-1/5 mt-40">
+            <h1 className="text-5xl lg:text-xl xl:text-3xl 2xl:text-5xl  text-center lg:text-left xl:text-left  2xl:text-left text-gray-800 font-bold ">
+              New Arrival
+            </h1>
           </div>
           <div className="">
             <Image
               className=""
               src="/photo-1.svg"
-              width={321.33}
-              height={380}
+              width={421.33}
+              height={480}
             />
           </div>
           <div className="">
             <Image
               className=""
               src="/photo-2.svg"
-              width={321.33}
-              height={380}
+              width={421.33}
+              height={480}
             />
           </div>
           <div className="">
             <Image
               className=""
               src="/photo-3.svg"
-              width={321.33}
-              height={380}
+              width={421.33}
+              height={480}
             />
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-32 ">
-        <h1 className="text-center font-bold text-3xl text-gray-800">
+      <div className="container mx-auto mt-32 mb-12 ">
+        <h1 className="text-center font-bold text-5xl text-gray-800">
           Shop By Category
         </h1>
-        <div className="flex gap-12 justify-center items-center mt-12">
+        <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row  gap-12 justify-center items-center place-content-center mt-20">
           <div className="bg-gray-300 w-11/12 px-3 py-4">
             <div className="text-center text-gray-600 text-lg mt-2">Men</div>
           </div>
@@ -294,7 +562,7 @@ export default function Index() {
             <div className="text-center text-gray-600 text-lg mt-2">Shoes</div>
           </div>
         </div>
-        <div className="flex gap-12 justify-center items-center mt-12">
+        <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row gap-12 justify-center items-center mt-12">
           <div className="bg-gray-300 w-11/12 px-3 py-4">
             <div className="text-center text-gray-600 text-lg mt-2">
               Accossries
@@ -314,14 +582,14 @@ export default function Index() {
       </div>
       <div className="container mx-auto mb-32 mt-32">
         <h1 className="text-center text-5xl font-bold">Comfiest Sofa Seats</h1>
-        <div className=" flex justify-center items-center">
+        <div className=" flex justify-center items-center ">
           <h1 className=" text-center text-xl mt-6 w-6/12 font-semibold px-4 text-gray-700">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout.
           </h1>
         </div>
-        <div className="flex justify-center items-center">
-          <div className="flex mt-12 gap-5">
+        <div className="flex place-content-center  ">
+          <div className="flex mt-12 gap-5 place-content-center ml-0 xl:ml-0 lg:ml-0 2xl:ml-12">
             <div className="w-11/12 ">
               <div className="">
                 <div className="flex gap-3  px-4">
@@ -391,7 +659,7 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="w-10/12  pt-4 ">
+            <div className="w-10/12  pt-4">
               <Image className="" src="/image-4.svg" width={366} height={393} />
             </div>
             <div className="w-11/12 ">
@@ -462,179 +730,14 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mb-32">
-        <div className="border-b">
-          <h1 className="text-gray-600">Home - Men</h1>
-          <h1 className="text-4xl font-bold text-gray-800 mb-8">Watches</h1>
-        </div>
-        <div className="flex mt-8">
-          <div className="">
-            <h1 className="text-xl font-semibold text-gray-700">485 Results</h1>
-          </div>
-          <div className="ml-auto">
-            <div className="border cursor-pointer flex gap-10 py-2 px-3">
-              <h1 className="text-gray-700">Recommended</h1>
-              <div className="ml-auto">
-                <Image
-                  className=""
-                  src="/Vector (2).svg"
-                  width={12.67}
-                  height={13.33}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex gap-12 mt-12">
-          <div className="w-11/12 border-t ">
-            <div className="flex border-b py-3">
-              <div className="">
-                <h1 className="text-gray-800 font-bold">Catagory</h1>
-                <h1>Premium</h1>
-              </div>
-              <div className="ml-auto mt-3">
-                <Image
-                  className=""
-                  src="/Vector (2).svg"
-                  width={12.67}
-                  height={13.33}
-                />
-              </div>
-            </div>
-            <div className="flex border-b py-3">
-              <div className="">
-                <h1 className="text-gray-800 font-bold">Designer</h1>
-                <h1>Jackson James</h1>
-              </div>
-              <div className="ml-auto mt-3">
-                <Image
-                  className=""
-                  src="/Vector (2).svg"
-                  width={12.67}
-                  height={13.33}
-                />
-              </div>
-            </div>
-            <div className="flex border-b py-3">
-              <div className="">
-                <h1 className="text-gray-800 font-bold">Color</h1>
-                <h1>All</h1>
-              </div>
-              <div className="ml-auto mt-3">
-                <Image
-                  className=""
-                  src="/Vector (2).svg"
-                  width={12.67}
-                  height={13.33}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="w-11/12">
-            <div className="">
-              <div className="">
-                <Image src="/watch-1.svg" width={296} height={360} />
-              </div>
-              <h1 className="text-gray-800 font-bold text-2xl mt-2">
-                Rolex Fossil
-              </h1>
-              <h1 className="text-gray-600 mt-3">
-                “Now is the winter of our discontent Made glorious summer by
-                this sun of York”
-              </h1>
-              <h1 className="text-lg text-gray-800 font-semibold mt-4">$ 55</h1>
-            </div>
-            <div className="mt-12">
-              <div className="">
-                <div className="">
-                  <Image src="/watch-2.svg" width={296} height={360} />
-                </div>
-                <h1 className="text-gray-800 font-bold text-2xl mt-2">
-                  Rolex Fossil
-                </h1>
-                <h1 className="text-gray-600 mt-3">
-                  “Now is the winter of our discontent Made glorious summer by
-                  this sun of York”
-                </h1>
-                <h1 className="text-lg text-gray-800 font-semibold mt-4">
-                  $ 55
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div className="w-11/12">
-            <div className="">
-              <div className="">
-                <Image src="/watch-3.svg" width={296} height={360} />
-              </div>
-              <h1 className="text-gray-800 font-bold text-2xl mt-2">
-                Rolex Fossil
-              </h1>
-              <h1 className="text-gray-600 mt-3">
-                “Now is the winter of our discontent Made glorious summer by
-                this sun of York”
-              </h1>
-              <h1 className="text-lg text-gray-800 font-semibold mt-4">$ 55</h1>
-            </div>
-            <div className="mt-12">
-              <div className="">
-                <div className="">
-                  <Image src="/watch-4.svg" width={296} height={360} />
-                </div>
-                <h1 className="text-gray-800 font-bold text-2xl mt-2">
-                  Rolex Fossil
-                </h1>
-                <h1 className="text-gray-600 mt-3">
-                  “Now is the winter of our discontent Made glorious summer by
-                  this sun of York”
-                </h1>
-                <h1 className="text-lg text-gray-800 font-semibold mt-4">
-                  $ 55
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div className="w-11/12">
-            <div className="">
-              <div className="">
-                <Image src="/watch-5.svg" width={296} height={360} />
-              </div>
-              <h1 className="text-gray-800 font-bold text-2xl mt-2">
-                Rolex Fossil
-              </h1>
-              <h1 className="text-gray-600 mt-3">
-                “Now is the winter of our discontent Made glorious summer by
-                this sun of York”
-              </h1>
-              <h1 className="text-lg text-gray-800 font-semibold mt-4">$ 55</h1>
-            </div>
-            <div className="mt-12">
-              <div className="">
-                <div className="">
-                  <Image src="/watch-6.svg" width={296} height={360} />
-                </div>
-                <h1 className="text-gray-800 font-bold text-2xl mt-2">
-                  Rolex Fossil
-                </h1>
-                <h1 className="text-gray-600 mt-3">
-                  “Now is the winter of our discontent Made glorious summer by
-                  this sun of York”
-                </h1>
-                <h1 className="text-lg text-gray-800 font-semibold mt-4">
-                  $ 55
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div className="container mx-auto mb-12 mb-32">
         <div className="">
           <h1 className="text-gray-800 text-3xl font-semibold ">
             Our Partners
           </h1>
         </div>
-        <div className="flex mt-12 gap-16">
+        <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row mt-12 gap-16">
           <div className="flex w-11/12">
             <div className="w-3/12">
               <Image className="" src="/vogue.svg" width={86} height={24} />
@@ -674,7 +777,7 @@ export default function Index() {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="flex justify-center items-center gap-12">
+        <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row justify-center items-center gap-12">
           <div className="">
             <Image
               className=""
@@ -710,8 +813,8 @@ export default function Index() {
             Follow Us on Instagram @ourinstagramname and tag us to get Featured
             on our timeline{" "}
           </h1>
-          <div className="flex justify-center items-center mt-10">
-            <button className="flex bg-gray-800 px-12 py-4 hover:bg-gray-900 focus:bg-gray-900 gap-4 justify-center items-center ">
+          <div className="flex  justify-center items-center mt-10">
+            <button className="flex  bg-gray-800 px-12 py-4 hover:bg-gray-900 focus:bg-gray-900 gap-4 justify-center items-center ">
               <div className="flex justify-center  items-center ">
                 <Image
                   className=""
@@ -730,7 +833,7 @@ export default function Index() {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="flex justify-center items-center gap-12 mt-16">
+        <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row justify-center items-center gap-12 mt-16">
           <div className="">
             <Image
               className=""
@@ -759,7 +862,7 @@ export default function Index() {
       </div>
       <div className="container mx-auto mt-32 mb-16 ">
         <div className="">
-          <div className="flex   gap-4  border-t border-b py-20 pl-5">
+          <div className="grid lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1   gap-4  border-t border-b py-20 pl-5">
             <div className="w-11/12">
               <h1 className=" cursor-pointer text-2xl text-gray-700 font-bold">
                 Customer services

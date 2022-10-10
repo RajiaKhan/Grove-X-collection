@@ -9,9 +9,129 @@ import {
   ButtonNext,
 } from "pure-react-carousel";
 export default function Index() {
+  const [navbar, setNavbar] = useState(false);
   return (
     <>
-      <div className="container mx-auto">
+      <div className="justify-center container mx-auto block lg:hidden xl:hidden 2xl:hidden   ">
+        <div className="  ">
+          <nav className="">
+            <div className="justify-between px-4 mx-auto items-center lg:max-w-7xl xl:flex 2xl:flex lg:flex md:px-8">
+              <div>
+                <div className="flex items-center justify-between py-3 md:py-5 ">
+                  <a href="#">
+                    <Image
+                      className="cursor-pointer"
+                      src="/Hourglass.svg"
+                      width={80}
+                      height={80}
+                    />
+                  </a>
+                  <div className="xl:hidden 2xl:hidden lg:hidden ">
+                    <button
+                      className="p-2  text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                      onClick={() => setNavbar(!navbar)}
+                    >
+                      {navbar ? (
+                        <Image
+                          className="cursor-pointer "
+                          src="/close.svg"
+                          width={20}
+                          height={20}
+                        />
+                      ) : (
+                        <svg
+                          fill="#000000"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 30 30"
+                          width="30px"
+                          height="30px"
+                        >
+                          <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z" />
+                        </svg>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  className={`flex-1 bg-gray-50 justify-self-center pb-3 mt-8 xl:hidden 2xl:hidden lg:hidden md:pb-0 md:mt-0 ${
+                    navbar ? "block" : "hidden"
+                  }`}
+                >
+                  <ul
+                    className="items-center gap-20 px-4 
+               jy-center  xl:flex 2xl:flex lg:flex space-y-0"
+                  >
+                    <li className="py-3">
+                      <a
+                        href="#section5"
+                        className="font-semibold text-gray-600"
+                      >
+                        <Image
+                          className="cursor-pointer"
+                          src="/AnitaJane.svg"
+                          width={115}
+                          height={24}
+                        />
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section6"
+                        className="font-semibold text-gray-600"
+                      >
+                        Men
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section7"
+                        className="font-semibold text-gray-600"
+                      >
+                        Women
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Kids
+                      </a>
+                    </li>
+                    <li className="py-3 ">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Join Newsletter
+                      </a>
+                    </li>
+                    <li className="py-3 ">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Blogs
+                      </a>
+                    </li>
+                    <li className="py-3  pb-32">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        About
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div className="container mx-auto hidden lg:block xl:block 2xl:block px-4">
         <div className="flex ">
           <div className="w-11/12  px-2 py-5">
             <div className="flex gap-12">
@@ -78,24 +198,10 @@ export default function Index() {
                 <ButtonBack
                   role="button"
                   aria-label="slide backward"
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full flex justify-center items-center bg-white border border-gray-300 hover:bg-gray-400 absolute z-30 left-0 ml-8 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer"
+                  className="w-8 h-8  flex justify-center items-center bg-gray-100  hover:bg-gray-400 absolute z-30 left-0 ml-8 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer"
                   id="prev"
                 >
-                  <svg
-                    width={8}
-                    height={14}
-                    viewBox="0 0 8 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7 1L1 7L7 13"
-                      stroke="black"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <Image src="/chevron-back (1).svg" width={24} height={24} />
                 </ButtonBack>
                 <Slider>
                   <Slide index={0}>
@@ -156,27 +262,52 @@ export default function Index() {
                 <ButtonNext
                   role="button"
                   aria-label="slide forward"
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full flex justify-center items-center bg-white border border-gray-300 hover:bg-gray-400 absolute z-30 right-0 mr-8 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
+                  className="w-8 h-8  flex justify-center items-center bg-gray-100 flex justify-center items-center  hover:bg-gray-400 focus:bg-gray-400 absolute z-30 right-0 mr-8 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
                   id="next"
                 >
-                  <svg
-                    width={8}
-                    height={14}
-                    viewBox="0 0 8 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 1L7 7L1 13"
-                      stroke="black"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <Image src="/chevron-back.svg" width={24} height={24} />
                 </ButtonNext>
               </div>
             </CarouselProvider>
+            <div className="flex ">
+              <div className="">
+                <div className="flex justify-center items-center">
+                  <Image className="" src="/cube.svg" width={24} height={24} />
+                </div>
+                <div className="flex justify-center items-center">
+                  <h1 className="text-center mt-4 w-10/12">
+                    Get free delivery, or pick up available items at an Apple
+                    Store
+                  </h1>
+                </div>
+              </div>
+              <div className="">
+                <div className="flex justify-center items-center">
+                  <Image
+                    className=""
+                    src="/fitness.svg"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+                <div className="flex justify-center items-center">
+                  <h1 className="text-center mt-4 w-11/12">
+                    Get 3 months of Apple Fitness+ with an Apple Watch
+                  </h1>
+                </div>
+              </div>
+              <div className="">
+                <div className="flex justify-center items-center">
+                  <Image className="" src="/cube.svg" width={24} height={24} />
+                </div>
+                <div className="flex justify-center items-center">
+                  <h1 className="text-center mt-4 w-10/12">
+                    14 calendar days to return an item from the date you
+                    received it.
+                  </h1>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="w-11/12">
             <h1 className="text-gray-800 text-3xl font-bold">
@@ -251,7 +382,7 @@ export default function Index() {
                 <div className="text-lg text-gray-800 font-bold">
                   Band colors
                 </div>
-                <div className="flex gap-6 mt-2 ">
+                <div className="flex gap-3 mt-2 ">
                   <div className="cursor-pointer">
                     <Image src="/Ellipse 95.svg" width={20} height={20} />
                   </div>
@@ -265,6 +396,36 @@ export default function Index() {
                     <Image src="/Ellipse 97.svg" width={20} height={20} />
                   </div>
                 </div>
+              </div>
+            </div>
+            <div className="flex gap-5 mt-5">
+              <div className="">
+                <button className="bg-gray-700 hover:bg-gray-900 focus:bg-gray-900  py-2 w-44">
+                  <div className="flex justify-center items-center gap-2">
+                    <div className="mt-1">
+                      <Image
+                        className=""
+                        src="/cart.svg"
+                        width={16}
+                        height={16}
+                      />
+                    </div>
+                    <h1 className="text-white font-semibold ">View in cart</h1>
+                  </div>
+                </button>
+              </div>
+              <div className="">
+                <button className="bg-white border hover:bg-gray-100 focus:bg-gray-100 py-2 w-44">
+                  <div className="flex gap-2 justify-center items-center">
+                    <div className="mt-1">
+                      <Image src="/heart.svg" width={16} height={16} />
+                    </div>
+                    <h1 className="font-semibold text-gray-600">Wishlist</h1>
+                  </div>
+                </button>
+              </div>
+              <div className="cursor-pointer">
+                <Image src="/share.svg" width={47} height={47} />
               </div>
             </div>
           </div>

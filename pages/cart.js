@@ -2,9 +2,129 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 const cart = () => {
+  const [navbar, setNavbar] = useState(false);
   return (
     <>
-      <div className="container mx-auto">
+      <div className="justify-center container mx-auto block lg:hidden xl:hidden 2xl:hidden   ">
+        <div className="  ">
+          <nav className="">
+            <div className="justify-between px-4 mx-auto items-center lg:max-w-7xl xl:flex 2xl:flex lg:flex md:px-8">
+              <div>
+                <div className="flex items-center justify-between py-3 md:py-5 ">
+                  <a href="#">
+                    <Image
+                      className="cursor-pointer"
+                      src="/Hourglass.svg"
+                      width={80}
+                      height={80}
+                    />
+                  </a>
+                  <div className="xl:hidden 2xl:hidden lg:hidden ">
+                    <button
+                      className="p-2  text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                      onClick={() => setNavbar(!navbar)}
+                    >
+                      {navbar ? (
+                        <Image
+                          className="cursor-pointer "
+                          src="/close.svg"
+                          width={20}
+                          height={20}
+                        />
+                      ) : (
+                        <svg
+                          fill="#000000"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 30 30"
+                          width="30px"
+                          height="30px"
+                        >
+                          <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z" />
+                        </svg>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  className={`flex-1 bg-gray-50 justify-self-center pb-3 mt-8 xl:hidden 2xl:hidden lg:hidden md:pb-0 md:mt-0 ${
+                    navbar ? "block" : "hidden"
+                  }`}
+                >
+                  <ul
+                    className="items-center gap-20 px-4 
+               jy-center  xl:flex 2xl:flex lg:flex space-y-0"
+                  >
+                    <li className="py-3">
+                      <a
+                        href="#section5"
+                        className="font-semibold text-gray-600"
+                      >
+                        <Image
+                          className="cursor-pointer"
+                          src="/AnitaJane.svg"
+                          width={115}
+                          height={24}
+                        />
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section6"
+                        className="font-semibold text-gray-600"
+                      >
+                        Men
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section7"
+                        className="font-semibold text-gray-600"
+                      >
+                        Women
+                      </a>
+                    </li>
+                    <li className="py-3">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Kids
+                      </a>
+                    </li>
+                    <li className="py-3 ">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Join Newsletter
+                      </a>
+                    </li>
+                    <li className="py-3 ">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        Blogs
+                      </a>
+                    </li>
+                    <li className="py-3  pb-32">
+                      <a
+                        href="#section8"
+                        className="font-semibold text-gray-600"
+                      >
+                        About
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div className="container mx-auto hidden lg:block xl:block 2xl:block px-4">
         <div className="flex ">
           <div className="w-11/12  px-2 py-5">
             <div className="flex gap-12">
@@ -56,6 +176,12 @@ const cart = () => {
         </div>
       </div>
       <div className="container mx-auto mt-12">
+        <div className="flex gap-1 cursor-pointer mb-4">
+          <div className="">
+            <Image src="/Frame (9).svg" width={16} height={16} />
+          </div>
+          <div className=" text-gray-400 text-sm ">Back</div>
+        </div>
         <h1 className="text-4xl font-bold ">Bag</h1>
         <div className="flex mt-12 gap-12">
           <div className="w-11/12 ">
