@@ -183,10 +183,11 @@ export default function Index() {
         </div>
       </div>
       <div className="container mx-auto mt-12">
-        <div className="flex justify-center items-center gap-16">
-          <div className="w-11/12 ">
+        <div className="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row justify-center items-center gap-16">
+          <div className=" px-6  w-full ">
+            {/* Carousel for Small-Sized Screen */}
             <CarouselProvider
-              className="relative"
+              className="relative block sm:hidden"
               naturalSlideWidth={100}
               isIntrinsicHeight={true}
               totalSlides={3}
@@ -205,15 +206,15 @@ export default function Index() {
                 </ButtonBack>
                 <Slider>
                   <Slide index={0}>
-                    <div className="gallery-cell  lg:mr-7 mr-6  w-full h-full  flex justify-center items-center">
-                      <div className="relative flex justify-center items-center">
+                    <div className="gallery-cell lg:mr-7 mr-6 lg:w-1/2 sm:w-96 w-full h-full">
+                      <div className="relative w-full h-full  lg:block  hidden ">
                         <Image
                           src="/apple watch.svg"
                           width={624}
                           height={536}
                         />
                       </div>
-                      <div className="relative w-full h-full lg:hidden  flex justify-center items-center">
+                      <div className="relative w-full h-full  lg:hidden  lg:block xl:block 2xl:block sm:hidden md:hidden">
                         <Image
                           src="/apple watch.svg"
                           width={624}
@@ -223,15 +224,15 @@ export default function Index() {
                     </div>
                   </Slide>
                   <Slide index={1}>
-                    <div className="gallery-cell  lg:mr-7 mr-6  w-full h-full  flex justify-center items-center">
-                      <div className="relative   flex justify-center items-center">
+                    <div className="gallery-cell lg:mr-7 mr-6 lg:w-1/2 sm:w-96 w-full h-full">
+                      <div className="relative w-full h-full lg:block hidden">
                         <Image
                           src="/apple watch.svg"
                           width={624}
                           height={536}
                         />
                       </div>
-                      <div className="relative w-full h-full lg:hidden  flex justify-center items-center">
+                      <div className="relative w-full h-full lg:hidden  lg:block xl:block 2xl:block sm:hidden md:hidden">
                         <Image
                           src="/apple watch.svg"
                           width={624}
@@ -241,15 +242,15 @@ export default function Index() {
                     </div>
                   </Slide>
                   <Slide index={2}>
-                    <div className="gallery-cell lg:mr-7 mr-6  w-full h-full  flex justify-center items-center">
-                      <div className="relative   flex justify-center items-center">
+                    <div className="gallery-cell lg:mr-7 mr-6 lg:w-1/2 sm:w-96 w-full h-full">
+                      <div className="relative w-full h-full lg:block hidden ">
                         <Image
                           src="/apple watch.svg"
                           width={624}
                           height={536}
                         />
                       </div>
-                      <div className="relative w-full h-full lg:hidden  flex justify-center items-center">
+                      <div className="relative w-full h-full lg:hidden ">
                         <Image
                           src="/apple watch.svg"
                           width={624}
@@ -269,7 +270,94 @@ export default function Index() {
                 </ButtonNext>
               </div>
             </CarouselProvider>
-            <div className="flex ">
+            {/* Carousel for lg and md*/}
+            <div className="w-11/12  hidden sm:block md:block  lg:block xl:block 2xl:block ">
+              <CarouselProvider
+                className="relative"
+                naturalSlideWidth={100}
+                isIntrinsicHeight={true}
+                totalSlides={3}
+                visibleSlides={1}
+                step={1}
+                infinite={true}
+              >
+                <div className=" flex justify-center items-center">
+                  <ButtonBack
+                    role="button"
+                    aria-label="slide backward"
+                    className="w-8 h-8  flex justify-center items-center bg-gray-100  hover:bg-gray-400 absolute z-30 left-0 ml-8 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer"
+                    id="prev"
+                  >
+                    <Image src="/chevron-back (1).svg" width={24} height={24} />
+                  </ButtonBack>
+                  <Slider>
+                    <Slide index={0}>
+                      <div className="gallery-cell  lg:mr-7 mr-6  w-full h-full  flex justify-center items-center mr-12 lg:mr-0 xl:mr-0 2xl:mr-0">
+                        <div className="relative flex justify-center items-center  lg:block xl:block 2xl:block sm:hidden md:hidden">
+                          <Image
+                            src="/apple watch.svg"
+                            width={624}
+                            height={536}
+                          />
+                        </div>
+                        <div className="relative w-full h-full lg:hidden  flex justify-center items-center">
+                          <Image
+                            src="/apple watch.svg"
+                            width={624}
+                            height={536}
+                          />
+                        </div>
+                      </div>
+                    </Slide>
+                    <Slide index={1}>
+                      <div className="gallery-cell  lg:mr-7 mr-6  w-full h-full  flex justify-center items-center  mr-12 lg:mr-0 xl:mr-0 2xl:mr-0">
+                        <div className="relative   flex justify-center items-center  lg:block xl:block 2xl:block sm:hidden md:hidden">
+                          <Image
+                            src="/apple watch.svg"
+                            width={624}
+                            height={536}
+                          />
+                        </div>
+                        <div className="relative w-full h-full lg:hidden  flex justify-center items-center">
+                          <Image
+                            src="/apple watch.svg"
+                            width={624}
+                            height={536}
+                          />
+                        </div>
+                      </div>
+                    </Slide>
+                    <Slide index={2}>
+                      <div className="gallery-cell lg:mr-7 mr-6  w-full h-full  flex justify-center items-center  mr-12 lg:mr-0 xl:mr-0 2xl:mr-0">
+                        <div className="relative   flex justify-center items-center  lg:block xl:block 2xl:block sm:hidden md:hidden">
+                          <Image
+                            src="/apple watch.svg"
+                            width={624}
+                            height={536}
+                          />
+                        </div>
+                        <div className="relative w-full h-full lg:hidden  flex justify-center items-center">
+                          <Image
+                            src="/apple watch.svg"
+                            width={624}
+                            height={536}
+                          />
+                        </div>
+                      </div>
+                    </Slide>
+                  </Slider>
+                  <ButtonNext
+                    role="button"
+                    aria-label="slide forward"
+                    className="w-8 h-8  flex justify-center items-center bg-gray-100 flex justify-center items-center  hover:bg-gray-400 focus:bg-gray-400 absolute z-30 right-0 mr-8 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                    id="next"
+                  >
+                    <Image src="/chevron-back.svg" width={24} height={24} />
+                  </ButtonNext>
+                </div>
+              </CarouselProvider>
+            </div>
+            <div className="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row hidden">
               <div className="">
                 <div className="flex justify-center items-center">
                   <Image className="" src="/cube.svg" width={24} height={24} />
@@ -310,10 +398,12 @@ export default function Index() {
             </div>
           </div>
           <div className="w-11/12">
-            <h1 className="text-gray-800 text-3xl font-bold">
+            <h1 className="text-gray-800  text-2xl lg:text-3xl xl:text-3xl  2xl:text-3xl  md:text-3xl  font-bold">
               Apple Watch Series 7
             </h1>
-            <h1 className="mt-3">by Apple</h1>
+            <h1 className="mt-3">
+              by<span className="font-bold"> Apple</span>
+            </h1>
             <div className="flex mt-3 gap-8">
               <div className="text-2xl text-gray-800 font-bold">$400</div>
               <div className="mt-1">
@@ -324,36 +414,114 @@ export default function Index() {
               </div>
             </div>
             <h1 className="text-sm  text-gray-800 font-semibold mt-3">
-              Availability - In stock
+              Availability<span className="font-bold">- in stock</span>
             </h1>
-            <div className="flex gap-12 mt-4">
+            <div className="hidden md:block xl:block 2xl:block lg:block">
+              <div className="flex gap-12 mt-4 ">
+                <div className="">
+                  <h1 className="mt-3 text-gray-800 font-semibold">
+                    Dimensions:
+                  </h1>
+                  <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                    Weight:
+                  </h1>
+                  <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                    Body:
+                  </h1>
+                  <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                    Display:
+                  </h1>
+                  <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                    CPU:
+                  </h1>
+                  <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                    GPU:
+                  </h1>
+                  <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                    Sensors:
+                  </h1>
+                </div>
+                <div className="">
+                  <h1 className="mt-4 text-semibold text-gray-600 text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                    45 x 38 x 10.7 mm (1.77 x 1.50 x 0.42 in)
+                  </h1>
+                  <h1 className="mt-3 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
+                    32 g (41mm), 38.8 g (45mm) (1.13 oz)
+                  </h1>
+                  <h1 className="mt-4 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
+                    Glass front, ceramic/sapphire crystal back, aluminum frame
+                  </h1>
+                  <h1 className="mt-4 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
+                    Retina LTPO OLED, 1000 nits (peak)
+                  </h1>
+                  <h1 className="mt-4 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
+                    Dual-core
+                  </h1>
+                  <h1 className="mt-4 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
+                    PowerVR
+                  </h1>
+                  <h1 className="mt-3 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
+                    Accelerometer, gyro, heart rate, barometer, compass Natural
+                    language commands & dictation Ultra Wideband (UWB) support
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div className="block lg:hidden xl:hidden md:hidden 2xl:hidden ">
               <div className="">
                 <h1 className="mt-3 text-gray-800 font-semibold">
                   Dimensions:
                 </h1>
-                <h1 className="mt-3 text-gray-800 font-semibold">Weight:</h1>
-                <h1 className="mt-3 text-gray-800 font-semibold">Body:</h1>
-                <h1 className="mt-3 text-gray-800 font-semibold">Display:</h1>
-                <h1 className="mt-3 text-gray-800 font-semibold">CPU:</h1>
-                <h1 className="mt-3 text-gray-800 font-semibold">GPU:</h1>
-                <h1 className="mt-3 text-gray-800 font-semibold">Sensors:</h1>
-              </div>
-              <div className="">
-                <h1 className="mt-3 text-semibold text-gray-600">
+                <h1 className="mt-4 text-semibold text-gray-600 text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
                   45 x 38 x 10.7 mm (1.77 x 1.50 x 0.42 in)
                 </h1>
-                <h1 className="mt-3 text-semibold text-gray-600">
+              </div>
+              <div className="">
+                <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                  Weight:
+                </h1>
+                <h1 className="mt-3 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
                   32 g (41mm), 38.8 g (45mm) (1.13 oz)
                 </h1>
-                <h1 className="mt-3 text-semibold text-gray-600">
+              </div>
+              <div className="">
+                <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                  Body:
+                </h1>
+                <h1 className="mt-4 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
                   Glass front, ceramic/sapphire crystal back, aluminum frame
                 </h1>
-                <h1 className="mt-3 text-semibold text-gray-600">
+              </div>
+              <div className="">
+                <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                  Display:
+                </h1>
+                <h1 className="mt-4 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
                   Retina LTPO OLED, 1000 nits (peak)
                 </h1>
-                <h1 className="mt-3 text-semibold text-gray-600">Dual-core</h1>
-                <h1 className="mt-3 text-semibold text-gray-600">PowerVR</h1>
-                <h1 className="mt-3 text-semibold text-gray-600">
+              </div>
+              <div className=""></div>
+              <div className="">
+                <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                  GPU:
+                </h1>
+                <h1 className="mt-4 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
+                  Dual core
+                </h1>
+              </div>
+              <div className="">
+                <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                  CPU:
+                </h1>
+                <h1 className="mt-4 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
+                  PowerVR
+                </h1>
+              </div>
+              <div className="">
+                <h1 className="mt-3 text-gray-800 font-semibold text-xs lg:text-sm xl:text-sm 2xl:text-sm md:text-sm">
+                  Sensors:
+                </h1>
+                <h1 className="mt-3 text-semibold text-gray-600 text-xs lg:text-md xl:text-md 2xl:text-md md:text-md">
                   Accelerometer, gyro, heart rate, barometer, compass Natural
                   language commands & dictation Ultra Wideband (UWB) support
                 </h1>
@@ -398,9 +566,9 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-5 mt-5">
+            <div className="flex  flex-col md:flex-row xl:flex-row 2xl:flex-row gap-5 mt-5 ">
               <div className="">
-                <button className="bg-gray-700 hover:bg-gray-900 focus:bg-gray-900  py-2 w-44">
+                <button className="bg-gray-700 hover:bg-gray-900 focus:bg-gray-900  py-2 w-full md:w-44 lg:w-44 xl:w-44 2xl:w-44">
                   <div className="flex justify-center items-center gap-2">
                     <div className="mt-1">
                       <Image
@@ -415,7 +583,7 @@ export default function Index() {
                 </button>
               </div>
               <div className="">
-                <button className="bg-white border hover:bg-gray-100 focus:bg-gray-100 py-2 w-44">
+                <button className="bg-white border hover:bg-gray-100 focus:bg-gray-100 py-2 w-full md:w-44 lg:w-44 xl:w-44 2xl:w-44">
                   <div className="flex gap-2 justify-center items-center">
                     <div className="mt-1">
                       <Image src="/heart.svg" width={16} height={16} />
@@ -431,11 +599,38 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mb-12 mt-32">
-        <div className="container mx-auto bg-gray-200   w-11/12">
+      <div className="container mt-7 px-5 mx-auto block  lg:hidden xl:hidden 2xl:hidden">
+        <div className="justify-center items-center flex">
+          <Image src="/nathan.svg" width={845} height={644} />
+        </div>
+        <div className="justify-center items-center flex">
+          <div className="bg-white place-content-center">
+            <h1 className="text-gray-800 text-4xl font-bold pt-10">Join us!</h1>
+            <h1 className="text-md text-gray-700 mt-4">
+              Subscribe to our newsletter, receive the latest updates and
+              exclusive promotions just into your inbox
+            </h1>
+            <label class="relative mt-3 border-b  ">
+              <span className="sr-only">Search</span>
+              <span className="absolute inset-y-0 left-0 flex items-center "></span>
+              <input
+                className="bg-white w-full border-b outline-none  pr-3 mt-5"
+                placeholder="Enter Your Email"
+                type="text"
+                name="search"
+              />
+            </label>
+            <button className="bg-gray-800 w-full py-3 mt-6 text-white">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto mb-12 mt-32 hidden  xl:block lg:block 2xl:block">
+        <div className="container mx-auto bg-gray-200 w-full  lg:w-full xl:w-full 2xl:w-11/12">
           <div className="relative">
-            <Image src="/nathan.svg" width={845} height={644} />
-            <div className="bg-white h-80 w-3/12 absolute right-72 top-48 px-7">
+            <Image className="" src="/nathan.svg" width={845} height={644} />
+            <div className="bg-white h-80 w-3/12 lg:w-4/12 xl:w-3/12 2xl:w-3/12  absolute  right-72 lg:right-4 xl:right-44 2xl:right-72 top-48 px-7">
               <h1 className="text-gray-800 text-4xl font-bold pt-10">
                 Join us!
               </h1>
@@ -462,7 +657,7 @@ export default function Index() {
       </div>
       <div className="container mx-auto mt-32 mb-16 ">
         <div className="">
-          <div className="flex gap-4 border-t border-b py-20 pl-5">
+          <div className="grid lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-4 border-t border-b py-20 pl-5">
             <div className="w-11/12">
               <h1 className=" cursor-pointer text-2xl text-gray-700 font-bold">
                 Customer services
@@ -513,7 +708,7 @@ export default function Index() {
               <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold">
                 Privacy policy
               </h1>
-              <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold mb-20 pb-2">
+              <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold  mb-3 lg:mb-20 md:mb-20 xl:mb-20 2xl:mb-20  pb-2">
                 Terms & conditions
               </h1>
             </div>

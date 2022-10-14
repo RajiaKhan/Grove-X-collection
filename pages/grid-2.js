@@ -5,9 +5,9 @@ export default function Modal() {
   return (
     <>
       <div className="container  mx-auto mt-12 ">
-        <div className="flex ">
+        <div className=" px-4 gap-4 flex xl:px-0 lg:px-0 2xl:px-28">
           <div className="">
-            <h1 className="text-gray-800 text-4xl font-bold">
+            <h1 className="text-gray-800 text-xl sm:text-sm lg:text-4xl md:text-4xl  2xl:text-4xl  xl:text-4xl   font-bold">
               The latest and greatest
             </h1>
           </div>
@@ -17,12 +17,12 @@ export default function Modal() {
             </button>
           </div>
         </div>
-        <div className="flex justify-center items-center mt-32 gap-12">
-          <div className="w-11/12">
+        <div className="flex flex flex-col lg:flex-row xl:flex-row 2xl:flex-row  justify-center items-center mt-32 gap-12">
+          <div className="2xl:w-8/12 lg:w-11/12 xl:w-11/12 w-11/12 ">
             <div className=" flex justify-center items-center">
               <Image src="/watch.svg" width={624} height={590} />
             </div>
-            <div className="flex px-12">
+            <div className="flex px-0 lg:px-2 xl:px-3 2xl:px-12 md:px-12">
               <div className="">
                 <h1 className="text-gray-800 text-lg font-bold">Chanel</h1>
                 <h1 className="text-gray-600 text-md font-semibold">
@@ -35,7 +35,7 @@ export default function Modal() {
             </div>
           </div>
           <div className="w-11/12">
-            <div className="flex gap-12">
+            <div className="flex justify-center items-center gap-8   flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-rowgap-12">
               <div className="">
                 <div className="">
                   <Image src="/cart-watch-2.svg" width={296} height={239} />
@@ -97,9 +97,9 @@ export default function Modal() {
             </div>
           </div>
         </div>
-        <div className="flex gap-12 mt-32">
+        <div className="flex flex flex-col lg:flex-row xl:flex-row 2xl:flex-row  justify-center items-center gap-12 mt-32">
           <div className="w-11/12">
-            <div className="flex gap-12 justify-center items-center">
+            <div className="flex   flex-col  md:flex-row lg:flex-row xl:flex-row 2xl:flex-row  gap-12 justify-center items-center">
               <div className="">
                 <div className="">
                   <Image src="/cart-perfume-1.svg" width={296} height={239} />
@@ -157,8 +157,10 @@ export default function Modal() {
             </div>
           </div>
           <div className="w-11/12 ">
-            <Image src="/cart-perfume.svg" width={624} height={590} />
-            <div className="flex w-full 2xl:w-10/12 ">
+            <div className="flex justify-center items-center lg:justify-start lg:items-start xl:justify-start xl:items-start 2xl:justify-start 2xl:items-start">
+              <Image src="/cart-perfume.svg" width={624} height={590} />
+            </div>
+            <div className="flex w-full 2xl:w-10/12 mt-3">
               <div className="">
                 <h1 className="text-gray-800 text-lg font-bold">Linterdit</h1>
                 <h1 className="text-gray-600 text-md font-semibold">
@@ -174,7 +176,7 @@ export default function Modal() {
       </div>
       <div className="container mx-auto mt-32 mb-16 ">
         <div className="">
-          <div className="flex gap-4 border-t border-b py-20 pl-5">
+          <div className="grid lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-4 border-t border-b py-20 pl-5">
             <div className="w-11/12">
               <h1 className=" cursor-pointer text-2xl text-gray-700 font-bold">
                 Customer services
@@ -225,7 +227,7 @@ export default function Modal() {
               <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold">
                 Privacy policy
               </h1>
-              <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold mb-20 pb-2">
+              <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold  mb-3 lg:mb-20 md:mb-20 xl:mb-20 2xl:mb-20  pb-2">
                 Terms & conditions
               </h1>
             </div>
@@ -263,7 +265,7 @@ export default function Modal() {
       {showModal ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-full my-6 mx-auto ">
+            <div className="relative w-full my-6 mx-auto  ">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
@@ -275,11 +277,11 @@ export default function Modal() {
                   ></button>
                 </div>
                 {/*body*/}
-                <div className="relative  flex-auto ">
+                <div className="relative   flex-auto mt-16 pt-96  sm:mt-3 sm:mt-1 lg:mt-12 lg:pt-0  xl:mt-12 xl:pt-0  2xl:mt-0 2xl:pt-0 md:mt-0 md:pt-12  ">
                   <div className="">
                     <div className="justify-between mx-auto items-center  ">
                       <div>
-                        <div className="flex items-center justify-between py-3 md:py-5 container mx-auto ">
+                        <div className="flex items-center justify-between py-3 md:py-5 container mx-auto px-4  ">
                           <div className="md:py-12 py-9 container mx-auto ">
                             <p className="text-sm leading-3 text-gray-600 font-normal mb-2 dark:text-white">
                               Home - Men - Products - Filters
@@ -333,7 +335,7 @@ export default function Modal() {
                                   </div>
                                 </div>
                                 <div className=" container mx-auto grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 lg:gap-y-0 md:gap-y-24 gap-y-14 ">
-                                  <div className="flex flex-col space-y-8 justify-start items-start">
+                                  <div className="flex flex-col space-y-8 justify-start items-start border-gray-50  border-l px-16 md-0:px-0 2xl:px-0 xl:px-16 lg:px-0">
                                     <div className="flex gap-2">
                                       <Image
                                         src="/Frame (4).svg"
@@ -387,15 +389,15 @@ export default function Modal() {
                                       </p>
                                     </div>
                                   </div>
-                                  <div className="flex flex-col space-y-8 lg:justify-start lg:items-start md:justify-start md:items-center  border-l px-16">
-                                    <div className="flex flex-col space-y-8 justify-start items-start">
+                                  <div className="flex flex-col space-y-8 lg:justify-start lg:items-start md:justify-start md:items-center border-l  px-16">
+                                    <div className="flex flex-col space-y-8 justify-start items-start ">
                                       <div className="flex gap-2">
                                         <Image
                                           src="/Frame (5).svg"
                                           width={24}
                                           height={24}
                                         />
-                                        <p className="lg:text-2xl text-xl lg:leading-6 leading-5 font-medium text-gray-800 dark:text-white">
+                                        <p className="lg:text-2xl text-xl lg:leading-6 leading-5 font-medium text-gray-800 dark:text-white ">
                                           Material
                                         </p>
                                       </div>

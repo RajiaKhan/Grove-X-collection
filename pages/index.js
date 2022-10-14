@@ -516,8 +516,8 @@ export default function Index() {
       </div>
       <div className="container mx-auto mt-5 lg:mt-20 xl:mt-20 2xl:mt-20  mb-16 px-2 ">
         <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row place-content-center gap-8 justify-center items-center">
-          <div className="w-full lg:w-1/5 xl:w-1/5 2xl:w-1/5 mt-40">
-            <h1 className="text-5xl lg:text-xl xl:text-3xl 2xl:text-5xl  text-center lg:text-left xl:text-left  2xl:text-left text-gray-800 font-bold ">
+          <div className="w-full lg:w-1/5 xl:w-1/5 2xl:w-1/5  mt-12">
+            <h1 className="text-3xl lg:text-xl xl:text-3xl 2xl:text-5xl  text-center lg:text-left xl:text-left  2xl:text-left text-gray-800 font-bold ">
               New Arrival
             </h1>
           </div>
@@ -547,31 +547,31 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-32 mb-12 ">
-        <h1 className="text-center font-bold text-5xl text-gray-800">
+      <div className="container mx-auto lg:mt-32 xl:mt-32 2xl:mt-32 md:mt-32 mt-6 mb-12 ">
+        <h1 className="text-center font-bold text-3xl lg:text-5xl xl:text-5xl 2xl:text-5xl  text-gray-800">
           Shop By Category
         </h1>
         <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row  gap-12 justify-center items-center place-content-center mt-20">
-          <div className="bg-gray-300 w-11/12 px-3 py-4">
+          <div className="bg-gray-100 hover:bg-gray-300   w-11/12 px-3 py-4">
             <div className="text-center text-gray-600 text-lg mt-2">Men</div>
           </div>
-          <div className="bg-gray-300 w-11/12 px-3 py-4">
+          <div className="bg-gray-100 hover:bg-gray-300  w-11/12 px-3 py-4">
             <div className="text-center text-gray-600 text-lg mt-2">Women</div>
           </div>
-          <div className="bg-gray-300 w-11/12 px-3 py-4">
+          <div className="bg-gray-100 hover:bg-gray-300  w-11/12 px-3 py-4">
             <div className="text-center text-gray-600 text-lg mt-2">Shoes</div>
           </div>
         </div>
         <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row gap-12 justify-center items-center mt-12">
-          <div className="bg-gray-300 w-11/12 px-3 py-4">
+          <div className="bg-gray-100 hover:bg-gray-300  w-11/12 px-3 py-4">
             <div className="text-center text-gray-600 text-lg mt-2">
               Accossries
             </div>
           </div>
-          <div className="bg-gray-300 w-11/12 px-3 py-4">
+          <div className="bg-gray-100 hover:bg-gray-300  w-11/12 px-3 py-4">
             <div className="text-center text-gray-600 text-lg mt-2">Bags</div>
           </div>
-          <div className="bg-gray-300 w-11/12 px-3 py-4 cursor-pointer">
+          <div className="bg-gray-100 hover:bg-gray-300  w-11/12 px-3 py-4 cursor-pointer">
             <Link href="/grid-2">
               <div className="text-center text-gray-600 text-lg mt-2">
                 Watches
@@ -580,15 +580,167 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mb-32 mt-32">
+      <div className="container mx-auto block lg:hidden xl:hidden 2xl:hidden px-4">
+        <h1 className="text-center text-2xl font-bold">Comfiest Sofa Seats</h1>
+        <div className="flex justify-center items-center">
+          <h1 className=" text-center text-center  mt-6 text-sm font-semibold px-4 text-gray-700">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout.
+          </h1>
+        </div>
+        <div className="justify-center items-center flex mt-6">
+          <Image className="" src="/image-4.svg" width={366} height={393} />
+        </div>
+        <div className="flex place-content-center justify-center items-center  ">
+          <div className="flex  justify-center items-center mt-12 gap-5 place-content-center ml-0 xl:ml-0 lg:ml-0 2xl:ml-12">
+            <div className="w-11/12 ">
+              <div className="">
+                <div className="flex gap-3  px-4">
+                  <div className="mt-2">
+                    <Image
+                      className=""
+                      src="/Frame 81.svg"
+                      width={15.11}
+                      height={14.17}
+                    />
+                  </div>
+                  <div className="">
+                    <h1 className="text-2xl text-gray-800 font-bold mt-1">
+                      Plush Cushions
+                    </h1>
+                  </div>
+                </div>
+                <h1 className="text-gray-600 w-11/12 px-4 font-semibold mt-2">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content.
+                </h1>
+              </div>
+              <div className="">
+                <div className="mt-16">
+                  <div className="flex gap-3  px-4">
+                    <div className="mt-2 ">
+                      <Image
+                        className=""
+                        src="/Frame 81.svg"
+                        width={15.11}
+                        height={14.17}
+                      />
+                    </div>
+                    <div className="">
+                      <h1 className="text-2xl text-gray-800 font-bold mt-1">
+                        Stain Resistant
+                      </h1>
+                    </div>
+                  </div>
+                  <h1 className="text-gray-600 w-11/12 px-4 font-semibold mt-2">
+                    It is a long established fact that a reader will be
+                    distracted by the readable content.
+                  </h1>
+                </div>
+              </div>
+              <div className="">
+                <div className="mt-16">
+                  <div className="flex gap-3   px-4">
+                    <div className="mt-3">
+                      <Image
+                        className=""
+                        src="/Frame 81.svg"
+                        width={15.11}
+                        height={14.17}
+                      />
+                    </div>
+                    <div className="">
+                      <h1 className="text-2xl text-gray-800 font-bold mt-1">
+                        Modular System
+                      </h1>
+                    </div>
+                  </div>
+                  <h1 className="text-gray-600 w-11/12 px-4 font-semibold mt-2">
+                    It is a long established fact that a reader will be
+                    distracted by the readable content.
+                  </h1>
+                </div>
+              </div>
+              <div className="mt-12">
+                <div className="flex gap-3  px-4">
+                  <div className="mt-2">
+                    <Image
+                      className=""
+                      src="/Frame 81.svg"
+                      width={15.11}
+                      height={14.17}
+                    />
+                  </div>
+                  <div className="">
+                    <h1 className="text-2xl text-gray-800 font-bold mt-1">
+                      Plush Cushions
+                    </h1>
+                  </div>
+                </div>
+                <h1 className="text-gray-600 w-11/12 px-4 font-semibold mt-2">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content.
+                </h1>
+              </div>
+              <div className="">
+                <div className="mt-16">
+                  <div className="flex gap-3  px-4">
+                    <div className="mt-2 ">
+                      <Image
+                        className=""
+                        src="/Frame 81.svg"
+                        width={15.11}
+                        height={14.17}
+                      />
+                    </div>
+                    <div className="">
+                      <h1 className="text-2xl text-gray-800 font-bold mt-1">
+                        Stain Resistant
+                      </h1>
+                    </div>
+                  </div>
+                  <h1 className="text-gray-600 w-11/12 px-4 font-semibold mt-2">
+                    It is a long established fact that a reader will be
+                    distracted by the readable content.
+                  </h1>
+                </div>
+              </div>
+              <div className="">
+                <div className="mt-16">
+                  <div className="flex gap-3   px-4">
+                    <div className="mt-3">
+                      <Image
+                        className=""
+                        src="/Frame 81.svg"
+                        width={15.11}
+                        height={14.17}
+                      />
+                    </div>
+                    <div className="">
+                      <h1 className="text-2xl text-gray-800 font-bold mt-1">
+                        Modular System
+                      </h1>
+                    </div>
+                  </div>
+                  <h1 className="text-gray-600 w-11/12 px-4 font-semibold mt-2">
+                    It is a long established fact that a reader will be
+                    distracted by the readable content.
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto mb-32 mt-32 hidden lg:block xl:block 2xl:block px-2">
         <h1 className="text-center text-5xl font-bold">Comfiest Sofa Seats</h1>
-        <div className=" flex justify-center items-center ">
+        <div className=" flex justify-center items-center  ">
           <h1 className=" text-center text-xl mt-6 w-6/12 font-semibold px-4 text-gray-700">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout.
           </h1>
         </div>
-        <div className="flex place-content-center  ">
+        <div className="flex justify-center items-center ">
           <div className="flex mt-12 gap-5 place-content-center ml-0 xl:ml-0 lg:ml-0 2xl:ml-12">
             <div className="w-11/12 ">
               <div className="">
@@ -731,52 +883,93 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="container mx-auto mb-12 mb-32">
+      <div className="container mx-auto mt-12 mb-32 px-4">
         <div className="">
-          <h1 className="text-gray-800 text-3xl font-semibold ">
+          <h1 className="text-gray-800 text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-bold text-center lg:text-left xl:text-left 2xl:text-left ">
             Our Partners
           </h1>
         </div>
-        <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row mt-12 gap-16">
-          <div className="flex w-11/12">
-            <div className="w-3/12">
-              <Image className="" src="/vogue.svg" width={86} height={24} />
-            </div>
-            <div className="text-lg text-gray-600 w-11/12">
+        <div className="container mt-8 mx-auto block xl:hidden 2xl:hidden lg:hidden ">
+          <div className=" justify-center items-center flex mt-12">
+            <Image className="" src="/vogue.svg" width={86} height={24} />
+          </div>
+          <div className="text-sm text-gray-500 justify-center items-center flex mt-3">
+            <h1 className=" w-full sm:w-6/12 md:w-6/12 text-center">
               “ It was an absolute pleasure working with them. They are the
               best, Highly Recommended! ”
-            </div>
+            </h1>
           </div>
-          <div className="flex w-11/12 gap-3">
-            <div className="w-4/12">
-              <Image className="" src="/BBC Logo.svg" width={86} height={24} />
-            </div>
-            <div className="text-lg text-gray-600">
-              <h1 className=" w-8/12">
-                “Love this! Does exactly what it is supposed to do and so far
-                without any real issues.”
-              </h1>
-            </div>
+          <div className=" justify-center items-center flex mt-12">
+            <Image className="" src="/BBC Logo.svg" width={84} height={24} />
           </div>
-          <div className="flex w-11/12 gap-3">
-            <div className="w-5/12">
-              <Image
-                className=""
-                src="/British GQ Logo.svg"
-                width={86}
-                height={24}
-              />
+          <div className=" text-sm text-gray-500 justify-center items-center flex mt-3">
+            <h1 className=" w-11/12 sm:w-6/12 md:w-6/12 text-center ">
+              “Love this! Does exactly what it is supposed to do and so far
+              without any real issues.”
+            </h1>
+          </div>
+          <div className="justify-center items-center flex mt-12">
+            <Image
+              className=""
+              src="/British GQ Logo.svg"
+              width={84}
+              height={24}
+            />
+          </div>
+          <div className=" text-sm text-gray-500 justify-center items-center flex mt-3 ">
+            <h1 className=" sm:w-6/12 md:w-6/12 text-center ">
+              “Thanks. I am fully satisfied and would recommend buying from them
+              as they have made my life so much easier :) ”
+            </h1>
+          </div>
+        </div>
+        <div className="hidden xl:block 2xl:block lg:block">
+          <div className="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row mt-12 gap-16 justify-center items-center">
+            <div className="flex w-11/12 gap-3  ">
+              <div className="  ">
+                <Image className="" src="/vogue.svg" width={120} height={40} />
+              </div>
+              <div className="text-lg lg:text-xs xl:text-sm 2xl:text-lg  text-gray-500  w-full lg:w-11/12 xl:w-11/12 2xl:w-11/12 ">
+                “ It was an absolute pleasure working with them. They are the
+                best, Highly Recommended! ”
+              </div>
             </div>
-            <div className="text-lg text-gray-600 ">
-              <h1 className="w-10/12">
-                “Thanks. I am fully satisfied and would recommend buying from
-                them as they have made my life so much easier :) ”
-              </h1>
+            <div className="flex w-11/12 gap-3 ml-12  lg:justify-start lg:items-start  xl:justify-start xl:items-start  2xl:justify-start 2xl:items-start justify-center items-center  flex-col lg:flex-row xl:flex-row 2xl:flex-row">
+              <div className="">
+                <Image
+                  className=""
+                  src="/BBC Logo.svg"
+                  width={190}
+                  height={60}
+                />
+              </div>
+              <div className="t text-gray-500">
+                <h1 className=" w-10/12 text-lg lg:text-xs xl:text-sm 2xl:text-lg  ">
+                  “Love this! Does exactly what it is supposed to do and so far
+                  without any real issues.”
+                </h1>
+              </div>
+            </div>
+            <div className="flex w-11/12 gap-3   flex-col lg:flex-row xl:flex-row 2xl:flex-row">
+              <div className="">
+                <Image
+                  className=""
+                  src="/British GQ Logo.svg"
+                  width={210}
+                  height={94}
+                />
+              </div>
+              <div className="text-lg text-lg lg:text-xs xl:text-sm 2xl:text-lg   text-gray-500 ">
+                <h1 className="">
+                  “Thanks. I am fully satisfied and would recommend buying from
+                  them as they have made my life so much easier :) ”
+                </h1>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row justify-center items-center gap-12">
           <div className="">
             <Image
@@ -806,10 +999,10 @@ export default function Index() {
       </div>
       <div className="container mx-auto">
         <div className="mt-12">
-          <h1 className="text-center text-5xl text-gray-800 font-bold">
+          <h1 className="text-center text-2xl lg:text-5xl  xl:text-5xl 2xl:text-5xl md:text-5xl  text-gray-800 font-bold">
             Follow Us On Instagram
           </h1>
-          <h1 className="text-center text-gray-700 text-xl mt-8">
+          <h1 className="text-center text-gray-700 text-sm lg:text-xl  xl:text-xl xl:text-xl md:text-xl  mt-8">
             Follow Us on Instagram @ourinstagramname and tag us to get Featured
             on our timeline{" "}
           </h1>
@@ -832,7 +1025,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="flex  flex-col lg:flex-row xl:flex-row 2xl:flex-row justify-center items-center gap-12 mt-16">
           <div className="">
             <Image
@@ -913,7 +1106,7 @@ export default function Index() {
               <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold">
                 Privacy policy
               </h1>
-              <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold mb-20 pb-2">
+              <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold  mb-3 lg:mb-20 md:mb-20 xl:mb-20 2xl:mb-20  pb-2">
                 Terms & conditions
               </h1>
             </div>

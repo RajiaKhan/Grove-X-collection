@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-const cart = () => {
+export default function Index() {
   const [navbar, setNavbar] = useState(false);
   return (
     <>
@@ -175,15 +175,15 @@ const cart = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-12">
-        <div className="flex gap-1 cursor-pointer mb-4">
+      <div className="container mx-auto mt-12 hidden lg:block xl:block 2xl:block md:block">
+        <div className="flex gap-1 cursor-pointer mb-4 px-4">
           <div className="">
             <Image src="/Frame (9).svg" width={16} height={16} />
           </div>
           <div className=" text-gray-400 text-sm ">Back</div>
         </div>
-        <h1 className="text-4xl font-bold ">Bag</h1>
-        <div className="flex mt-12 gap-12">
+        <h1 className="text-4xl font-bold px-4">Bag</h1>
+        <div className="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row mt-12 gap-12 px-4">
           <div className="w-11/12 ">
             <div className="flex border-t pt-7 border-b pb-7">
               <div className="">
@@ -378,7 +378,8 @@ const cart = () => {
               </div>
             </div>
           </div>
-          <div className="w-5/12 bg-gray-50 relative ">
+
+          <div className="w-5/12 bg-gray-50 relative hidden lg:block 2xl:block xl:block  ">
             <h1 className="text-4xl text-gray-800 font-bold mt-10 ml-10">
               Summary
             </h1>
@@ -428,9 +429,234 @@ const cart = () => {
           </div>
         </div>
       </div>
+      <div className="container mx-auto block lg:hidden xl:hidden 2xl:hidden md:hidden px-5">
+        <div className=" mt-6">
+          <div className="justify-center items-center flex mb-12">
+            <Image src="/w-1.svg" width={190} height={190} />
+          </div>
+          <div className="flex">
+            <div className="">
+              <div className="">
+                <h1 className="font-bold text-sm text-gray-500">RF293</h1>
+                <h1 className="font-bold text-md text-gray-800 mt-1">
+                  Apple Watch Series 7
+                </h1>
+                <h1 className="font-semibold mt-5 text-sm text-gray-500">
+                  Height: 10 inches
+                </h1>
+                <h1 className="font-semibold mt-2 text-sm text-gray-500">
+                  Color: Black
+                </h1>
+                <h1 className="font-semibold mt-2 text-sm text-gray-500">
+                  Composition: 100% calf leather
+                </h1>
+                <div className="flex gap-5 mt-3">
+                  <div className="">
+                    <h1 className="font-semibold mt-2 text-md underline cursor-pointer text-gray-800">
+                      Add to favorites
+                    </h1>
+                  </div>
+                  <div className="">
+                    <h1 className="font-semibold mt-2 text-md underline cursor-pointer text-red-500">
+                      Remove
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="ml-auto">
+              <div className="relative border flex   mx-auto lg:pb-0 pb-2 mt-5 ">
+                <select
+                  type="text"
+                  name="language"
+                  required
+                  id="language"
+                  className="bg-white cursor-pointer px-2  appearance-none mt-3 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none text-blue-900  rounded"
+                >
+                  <option value="Switzerland">01</option>
+                  <option value="America">02</option>
+                  <option value="Australia">03</option>
+                  <option value="Australia">04</option>
+                  <option value="Australia">05</option>
+                </select>
+                <div className="z-30 right-2 cursor-pointer  absolute  top-2.5 pointer-events-none">
+                  <Image src="/down.png" width={20} height={20} className="" />
+                </div>
+              </div>
+              <h1 className="text-xl font-bold text-gray-800 mt-24 ml-4">
+                $9,000
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div className="mt-12">
+          <div className="justify-center items-center flex mb-12">
+            <Image src="/w-2.svg" width={190} height={190} />
+          </div>
+          <div className="flex">
+            <div className="">
+              <div className="">
+                <h1 className="font-bold text-sm text-gray-500">RF293</h1>
+                <h1 className="font-bold text-md text-gray-800 mt-1">
+                  Apple Watch Series 7
+                </h1>
+                <h1 className="font-semibold mt-5 text-sm text-gray-500">
+                  Height: 10 inches
+                </h1>
+                <h1 className="font-semibold mt-2 text-sm text-gray-500">
+                  Color: Black
+                </h1>
+                <h1 className="font-semibold mt-2 text-sm text-gray-500">
+                  Composition: 100% calf leather
+                </h1>
+                <div className="flex gap-5 mt-3">
+                  <div className="">
+                    <h1 className="font-semibold mt-2 text-md underline cursor-pointer text-gray-800">
+                      Add to favorites
+                    </h1>
+                  </div>
+                  <div className="">
+                    <h1 className="font-semibold mt-2 text-md underline cursor-pointer text-red-500">
+                      Remove
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="ml-auto">
+              <div className="relative border flex   mx-auto lg:pb-0 pb-2 mt-5 ">
+                <select
+                  type="text"
+                  name="language"
+                  required
+                  id="language"
+                  className="bg-white cursor-pointer px-2  appearance-none mt-3 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none text-blue-900  rounded"
+                >
+                  <option value="Switzerland">01</option>
+                  <option value="America">02</option>
+                  <option value="Australia">03</option>
+                  <option value="Australia">04</option>
+                  <option value="Australia">05</option>
+                </select>
+                <div className="z-30 right-2 cursor-pointer  absolute  top-2.5 pointer-events-none">
+                  <Image src="/down.png" width={20} height={20} className="" />
+                </div>
+              </div>
+              <h1 className="text-xl font-bold text-gray-800 mt-24 ml-4">
+                $9,000
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div className="mt-12">
+          <div className="justify-center items-center flex mb-12">
+            <Image src="/w-3.svg" width={190} height={190} />
+          </div>
+          <div className="flex">
+            <div className="">
+              <div className="">
+                <h1 className="font-bold text-sm text-gray-500">RF293</h1>
+                <h1 className="font-bold text-md text-gray-800 mt-1">
+                  Apple Watch Series 7
+                </h1>
+                <h1 className="font-semibold mt-5 text-sm text-gray-500">
+                  Height: 10 inches
+                </h1>
+                <h1 className="font-semibold mt-2 text-sm text-gray-500">
+                  Color: Black
+                </h1>
+                <h1 className="font-semibold mt-2 text-sm text-gray-500">
+                  Composition: 100% calf leather
+                </h1>
+                <div className="flex gap-5 mt-3">
+                  <div className="">
+                    <h1 className="font-semibold mt-2 text-md underline cursor-pointer text-gray-800">
+                      Add to favorites
+                    </h1>
+                  </div>
+                  <div className="">
+                    <h1 className="font-semibold mt-2 text-md underline cursor-pointer text-red-500">
+                      Remove
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="ml-auto">
+              <div className="relative border flex   mx-auto lg:pb-0 pb-2 mt-5 ">
+                <select
+                  type="text"
+                  name="language"
+                  required
+                  id="language"
+                  className="bg-white cursor-pointer px-2  appearance-none mt-3 pr-12 lg:text-lg md:text-sm text-xs border border-transparent focus:outline-none text-blue-900  rounded"
+                >
+                  <option value="Switzerland">01</option>
+                  <option value="America">02</option>
+                  <option value="Australia">03</option>
+                  <option value="Australia">04</option>
+                  <option value="Australia">05</option>
+                </select>
+                <div className="z-30 right-2 cursor-pointer  absolute  top-2.5 pointer-events-none">
+                  <Image src="/down.png" width={20} height={20} className="" />
+                </div>
+              </div>
+              <h1 className="text-xl font-bold text-gray-800 mt-24 ml-4">
+                $9,000
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=" bg-gray-50  w-11/12 block lg:hidden xl:hidden 2xl:hidden py-5 mt-12 container mx-auto">
+        <h1 className="text-4xl text-gray-800 font-bold mt-10 ml-10">
+          Summary
+        </h1>
+        <div className=" ">
+          <div className=" w-full">
+            <div className="flex px-12 mt-12">
+              <div className="text-gray-800 font-semibold text-xl ">
+                Subtotal
+              </div>
+              <div className="text-gray-800 ml-auto font-semibold text-xl">
+                $9,000
+              </div>
+            </div>
+            <div className="flex px-12 mt-6">
+              <div className="text-gray-800 font-semibold text-xl">
+                Shipping
+              </div>
+              <div className="text-gray-800 ml-auto font-semibold text-xl">
+                $30
+              </div>
+            </div>{" "}
+            <div className="flex px-12 mt-6">
+              <div className="text-gray-800 font-semibold text-xl">Tax</div>
+              <div className="text-gray-800 ml-auto font-semibold text-xl">
+                $39
+              </div>
+            </div>
+          </div>
+          <div className=" w-full mt-32">
+            <div className="flex px-12">
+              <div className="text-gray-800 font-semibold text-3xl">Total</div>
+              <div className="text-gray-800 ml-auto font-bold text-3xl">
+                $10,240
+              </div>
+            </div>
+            <div className="flex justify-center items-center px-12">
+              <Link href="/checkout">
+                <button className=" bg-gray-800 text-white mt-6 py-4 w-full hover:bg-gray-900 focus:bg-gray-800 ">
+                  Checkout
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container mx-auto mt-44 mb-16 ">
         <div className="">
-          <div className="flex   gap-4  border-t border-b py-20 pl-5">
+          <div className="grid lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1   gap-4  border-t border-b py-20 pl-5">
             <div className="w-11/12">
               <h1 className=" cursor-pointer text-2xl text-gray-700 font-bold">
                 Customer services
@@ -481,7 +707,7 @@ const cart = () => {
               <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold">
                 Privacy policy
               </h1>
-              <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold mb-20 pb-2">
+              <h1 className=" cursor-pointer text-lg text-gray-600 mt-4 font-semibold  mb-3 lg:mb-20 md:mb-20 xl:mb-20 2xl:mb-20  pb-2">
                 Terms & conditions
               </h1>
             </div>
@@ -518,5 +744,4 @@ const cart = () => {
       </div>
     </>
   );
-};
-export default cart;
+}
